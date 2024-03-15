@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{color: white; background-color: green;}
+        .error{color: white; background-color: red;}
+    </style>
+</head>
+<body>
+    <ul>
+        {% for message in messages %}
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</li>
+        {% endfor %}
+    </ul>
+    <main>
+        {% block main %}{% endblock main %}
+    </main>
+</body>
+</html>

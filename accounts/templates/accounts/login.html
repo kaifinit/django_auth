@@ -1,0 +1,11 @@
+{% extends "accounts/base.html" %}
+{% block main %}
+
+    <form action="{% url "login" %}{% if request.GET.next %}?next={{request.GET.next}}{% endif %}" method="post">
+        {% csrf_token %}
+        
+        <input type="text" placeholder="Username" name="username"> <br>
+        <input type="password" placeholder="Password" name="password">
+        <button>Login</button>
+    </form>
+{% endblock main %}
