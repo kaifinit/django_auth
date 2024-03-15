@@ -14,7 +14,7 @@ This is a simple auth application built with Django.
 2. Navigate to the project directory:
 
 ```bash
-  cd my-project
+  cd django_auth
 ```
 3. Install a virtual environment (Optional):
 
